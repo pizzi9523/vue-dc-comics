@@ -119,7 +119,7 @@ footer {
     .row {
       justify-content: space-between;
       align-items: center;
-      padding: 40px;
+      padding: 40px 0;
       .sign-up {
         color: white;
         padding: 10px;
