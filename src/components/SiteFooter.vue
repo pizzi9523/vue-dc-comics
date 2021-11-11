@@ -124,6 +124,7 @@ footer {
         color: white;
         padding: 10px;
         border: 1px solid $primary-color;
+        font-weight: bold;
       }
       .social {
         display: flex;
@@ -131,6 +132,7 @@ footer {
         gap: 20px;
         p {
           color: $primary-color;
+          font-weight: bold;
         }
       }
     }
