@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <main class="container-fluid">
     <div class="container">
       <div class="content">Content Goes here</div>
     </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

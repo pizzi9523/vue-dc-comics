@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <header id="site_header">
+  <header id="site_header">
+    <div class="container">
       <div class="logo">
         <img src="../assets/img/dc-logo.png" alt="" />
       </div>
@@ -19,8 +19,8 @@
           <li><a href=""></a>SHOP</li>
         </ul>
       </nav>
-    </header>
-  </div>
+    </div>
+  </header>
 
   <!-- /#site_header -->
 </template>
@@ -33,8 +33,10 @@ export default {};
 @import "../assets/scss/variables.scss";
 
 #site_header {
-  display: flex;
-  justify-content: space-between;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .logo {
     padding: 1rem 0;
