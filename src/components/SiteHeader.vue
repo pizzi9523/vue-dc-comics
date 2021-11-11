@@ -1,24 +1,27 @@
 <template>
-  <header id="site_header">
-    <div class="logo">
-      <img src="../assets/img/dc-logo.png" alt="" />
-    </div>
+  <div class="container">
+    <header id="site_header">
+      <div class="logo">
+        <img src="../assets/img/dc-logo.png" alt="" />
+      </div>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href=""></a>CHARACTERS</li>
-        <li class="active"><a href=""></a>COMICS</li>
-        <li><a href=""></a>MOVIES</li>
-        <li><a href=""></a>TV</li>
-        <li><a href=""></a>GAMES</li>
-        <li><a href=""></a>COLLECTIBLES</li>
-        <li><a href=""></a>VIDEOS</li>
-        <li><a href=""></a>FANS</li>
-        <li><a href=""></a>NEWS</li>
-        <li><a href=""></a>SHOP</li>
-      </ul>
-    </nav>
-  </header>
+      <nav class="navbar">
+        <ul>
+          <li><a href=""></a>CHARACTERS</li>
+          <li class="active"><a href=""></a>COMICS</li>
+          <li><a href=""></a>MOVIES</li>
+          <li><a href=""></a>TV</li>
+          <li><a href=""></a>GAMES</li>
+          <li><a href=""></a>COLLECTIBLES</li>
+          <li><a href=""></a>VIDEOS</li>
+          <li><a href=""></a>FANS</li>
+          <li><a href=""></a>NEWS</li>
+          <li><a href=""></a>SHOP</li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
   <!-- /#site_header -->
 </template>
     
@@ -31,8 +34,11 @@ export default {};
 
 #site_header {
   display: flex;
-  padding: 40px;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  .logo {
+    padding: 1rem 0;
+  }
 
   .navbar {
     display: flex;
@@ -41,13 +47,17 @@ export default {};
     ul {
       display: flex;
       list-style: none;
+      height: 100%;
+
       li {
         margin: 0 1rem;
-        padding: 1rem 0;
-        font-size: 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        height: 100%;
+        line-height: 140px;
 
         &.active {
-          border-bottom: 8px solid $primary-color;
+          border-bottom: 4px solid $primary-color;
         }
       }
     }
