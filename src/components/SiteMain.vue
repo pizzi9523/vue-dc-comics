@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div class="container-fluid">
-      <img src="../assets/img/jumbotron.jpg" alt="" />
-    </div>
+    <div class="jumbotron container-fluid"></div>
     <MainFooter />
   </main>
 </template>
@@ -113,8 +111,10 @@ export default {
 .container-fluid {
   background-color: $dark-content-color;
 }
-img {
-  width: 100%;
-  height: 400px;
+
+.jumbotron {
+  height: 500px;
+  background-image: url("../assets/img/jumbotron.jpg");
+  background-size: cover;
 }
 </style>
