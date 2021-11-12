@@ -1,7 +1,9 @@
 <template>
   <main>
     <div class="jumbotron container-fluid"></div>
-    <div class="container">
+    <div class="container series">
+      <div class="current_series">CURRENT SERIES</div>
+
       <div class="row">
         <CardSerie
           v-for="fumetto in fumetti"
@@ -123,6 +125,11 @@ export default {
 
 main {
   background-color: $dark-content-color;
+  .container {
+    &.series {
+      position: relative;
+    }
+  }
   .row {
     padding: 40px 0;
     flex-wrap: wrap;
@@ -139,9 +146,22 @@ main {
   text-align: center;
   color: white;
   padding: 1rem 3rem;
-  border: none;
   background-color: $primary-color;
   width: 200px;
   margin: 1.5rem auto;
+  font-weight: bold;
+}
+
+.current_series {
+  text-align: center;
+  color: white;
+  padding: 1rem 1.5rem;
+  background-color: $primary-color;
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+  position: absolute;
+  top: -1.8rem;
+  left: 6 rem;
 }
 </style>
