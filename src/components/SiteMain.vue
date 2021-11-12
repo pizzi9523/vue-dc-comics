@@ -1,17 +1,32 @@
 <template>
   <main>
     <div class="jumbotron container-fluid"></div>
+    <div class="container">
+      <div class="row">
+        <CardSerie
+          v-for="fumetto in fumetti"
+          :key="fumetto.series"
+          :image="fumetto.thumb"
+          :titolo="fumetto.series.toUpperCase()"
+        />
+      </div>
+    </div>
     <MainFooter />
   </main>
 </template>
 
 <script>
+import CardSerie from "./CardSerie.vue";
 import MainFooter from "./MainFooter.vue";
 
 export default {
+  components: {
+    CardSerie,
+    MainFooter,
+  },
   data() {
     return {
-      series: [
+      fumetti: [
         {
           thumb:
             "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -99,17 +114,18 @@ export default {
       ],
     };
   },
-  components: {
-    MainFooter,
-  },
 };
 </script>
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
 
-.container-fluid {
+main {
   background-color: $dark-content-color;
+  .row {
+    padding: 40px 0;
+    flex-wrap: wrap;
+  }
 }
 
 .jumbotron {
