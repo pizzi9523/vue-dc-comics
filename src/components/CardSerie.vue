@@ -1,7 +1,9 @@
 <template>
-  <div class="card col-2">
-    <img :src="image" alt="" />
-    <p>{{ titolo }}</p>
+  <div class="col-2">
+    <div class="card">
+      <img :src="image" alt="" />
+      <p>{{ titolo }}</p>
+    </div>
   </div>
 </template>
 
@@ -16,14 +18,16 @@ export default {
 
 <style lang="scss">
 .card {
+  margin: 1rem;
   img {
     height: 160px;
-    width: 160px;
+    width: 100%;
     object-fit: cover;
     object-position: top;
   }
   p {
-    padding: 1rem 1rem 3rem 0;
+    font-size: 13 px;
+    padding: 1rem 0;
     color: white;
   }
 }

@@ -10,6 +10,7 @@
           :titolo="fumetto.series.toUpperCase()"
         />
       </div>
+      <div class="load_more">LOAD MORE</div>
     </div>
     <MainFooter />
   </main>
@@ -132,5 +133,15 @@ main {
   height: 500px;
   background-image: url("../assets/img/jumbotron.jpg");
   background-size: cover;
+}
+
+.load_more {
+  text-align: center;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  background-color: $primary-color;
+  width: 200px;
+  margin: 1.5rem auto;
 }
 </style>
